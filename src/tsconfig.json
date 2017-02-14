@@ -13,6 +13,11 @@
     "target": "es5",
     "typeRoots": [
       "../node_modules/@types"
-    ]
+    ],
+    "paths": {
+      "ui-model": ["./libraries/ui-model"],
+      "ui-model-angular": ["./libraries/ui-model-angular"],
+      "ui-model-angular-bootstrap": ["./libraries/ui-model-angular-bootstrap"]
+    }
   }
 }
