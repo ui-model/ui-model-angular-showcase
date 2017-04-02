@@ -9,12 +9,11 @@ export class UpdateTitleGuard implements CanActivateChild {
   constructor(private title: Title) {
   }
 
-  canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot):
-    Observable<boolean>
+  canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean>
     | Promise<boolean>
     | boolean {
     if (childRoute.data) {
-      const title = (childRoute.data as Metadata).title;
+      const title = (childRoute.data as Metadata).title || 'Untitled';
       this.title.setTitle(`${title} - UI Model Showcase`);
     }
     return true;
